@@ -27,7 +27,8 @@ def checkCommits():
 
 
 client = discord.Client()
-
+botkey = 'GsOxNzI1NDEwNjkXXTk3MjQ5.CrdAWw.c3wqsyXLlu2jzxx_xS7Hvx0XxHk'
+channelnumber = 100707500019139000
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -84,10 +85,5 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-client.run('botkey')
+client.run(botkey)
 
-
-
-'''Cogemos el último Commit y comprobamos si está en la lista
-            if commitlist[-1].getSha() not in log.content:
-                print("nope")'''
